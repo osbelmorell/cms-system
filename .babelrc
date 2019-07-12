@@ -1,0 +1,53 @@
+{
+	"presets": [
+		[
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+        "corejs": "3",
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-transform-async-to-generator",
+    "@babel/plugin-syntax-dynamic-import",
+    ["inline-react-svg",
+      {
+        "svgo": {
+          "plugins": [
+            {
+              "removeAttrs": { "attrs": "(data-name|stroke|fill)" }
+            },
+            {"cleanupEnableBackground": true },
+            {"cleanupIDs": true },
+            {"collapseGroups": true },
+            {"convertPathData": true },
+            {"convertShapeToPath": true },
+            {"convertTransform": true },
+            {"mergePaths": true },
+            {"moveElemsAttrsToGroup": true },
+            {"removeAttrs": true },
+            {"removeDesc": true },
+            {"removeDimensions": true },
+            {"removeElementsByAttr": true },
+            {"removeHiddenElems": true },
+            {"removeMetadata": true },
+            {"removeRasterImages": true },
+            {"removeStyleElement": true },
+            {"removeTitle": true },
+            {"removeUnknownsAndDefaults": true },
+            {"removeUnusedNS": true },
+            {"removeUselessDefs": true },
+            {"removeUselessStrokeAndFill": true },
+            {"removeXMLNS": true },
+          ]
+        }
+      }
+    ],
+  ]
+}
